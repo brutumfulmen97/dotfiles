@@ -73,3 +73,5 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 eval "$(starship init zsh)"
+
+source /usr/share/nvm/init-nvm.sh

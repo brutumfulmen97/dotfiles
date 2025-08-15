@@ -26,7 +26,8 @@
     "context": "(Workspace || Editor) &&  vim_mode == normal",
     "bindings": {
       "space e": "workspace::ToggleRightDock",
-      "space E": "workspace::ToggleLeftDock"
+      "space E": "workspace::ToggleLeftDock",
+      "ctrl-l": "assistant::InlineAssist"
     }
   },
   {

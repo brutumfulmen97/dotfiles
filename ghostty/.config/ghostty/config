@@ -43,7 +43,7 @@
 # resize-overlay-duration = 4s 200ms
 window-padding-y = 0
 window-padding-x = 10
-theme=ayu
+theme=tokyonight
 window-decoration=none
 
 # keyboard
