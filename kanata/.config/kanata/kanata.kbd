@@ -3,7 +3,7 @@
 )
 (defsrc
   ralt 
-  caps h j k l d
+  caps h j k l d spc
 )
 (defalias
   ralt-mod (tap-hold 200 200 ralt lmet)
@@ -11,9 +11,9 @@
 )
 (deflayer base
   @ralt-mod
-  @caps-mod h j k l d
+  @caps-mod h j k l d spc
 )
 (deflayer arrows
   @ralt-mod
-  _ left down up right del
+  _ left down up right del ret
 )

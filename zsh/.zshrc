@@ -1,9 +1,11 @@
 export PATH=$HOME/.local/bin:$PATH
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
-source /home/vlatko/kickstart/autocomplete.sh
+# source /home/vlatko/kickstart/autocomplete.sh
 
 export EDITOR=nvim
+export SUDO_EDITOR="$EDITOR"
+export BAT_THEME=ansi
 
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -60,13 +62,17 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='ls --color'
-alias lsa='ls -la'
 alias vim='nvim'
 alias c='clear'
 alias lzg='lazygit'
 alias lzd='lazydocker'
 alias ..='cd ../'
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+alias clipboard='xclip -sel clip'
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -75,3 +81,22 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 
 source /usr/share/nvm/init-nvm.sh
+
+# Enable Ctrl+Left/Right word navigation
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+# Enable Delete key
+bindkey "^[[3~" delete-char
+
+# Enable Ctrl+Delete (delete word forward)
+bindkey "^[[3;5~" kill-word
+
+# Enable Ctrl+Backspace (delete word backward)
+bindkey "^H" backward-kill-word
+
+export FZF_DEFAULT_OPTS=" \
+--color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
+--color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
+--color=selected-bg:#45475A \
+--color=border:#6C7086,label:#CDD6F4"

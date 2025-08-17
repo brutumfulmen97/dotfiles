@@ -31,13 +31,6 @@
     }
   },
   {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {
-      "j j": ["workspace::SendKeystrokes", "escape"],
-      "j k": ["workspace::SendKeystrokes", "escape"]
-    }
-  },
-  {
     "bindings": {
       "ctrl-enter": "vim::InsertLineBelow",
       "ctrl-shift-enter": "vim::InsertLineAbove",
