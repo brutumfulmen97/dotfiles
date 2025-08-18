@@ -37,6 +37,12 @@
     }
   },
   {
+    "context": "(Workspace || Editor) && (vim_mode == insert)",
+    "bindings": {
+      "j j": "vim::SwitchToNormalMode"
+    }
+  },
+  {
     "bindings": {
       "ctrl-enter": "vim::InsertLineBelow",
       "ctrl-shift-enter": "vim::InsertLineAbove",

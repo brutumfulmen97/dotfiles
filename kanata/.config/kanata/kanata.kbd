@@ -6,7 +6,7 @@
   caps h j k l d spc
 )
 (defalias
-  ralt-mod (tap-hold 200 200 ralt lmet)
+  ralt-mod (tap-hold 200 200 lmet lmet)
   caps-mod (tap-hold 200 200 esc (layer-toggle arrows))
 )
 (deflayer base
