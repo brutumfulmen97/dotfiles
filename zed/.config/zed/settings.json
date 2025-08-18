@@ -85,7 +85,7 @@
     "runnables": false,
     // Whether to show fold buttons in the gutter.
     "folds": false,
-    "breakpoints": false
+    "breakpoints": true
   },
   "indent_guides": {
     /// Whether to show indent guides in the editor.
