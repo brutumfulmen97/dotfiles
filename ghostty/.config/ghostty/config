@@ -45,8 +45,9 @@ window-padding-y = 0
 window-padding-x = 10
 theme=catppuccin-mocha
 window-decoration=none
+font-size=18
 
-background-opacity = 0.75
+background-opacity = 0.90
 background-blur-radius = 40
 
 # keyboard
