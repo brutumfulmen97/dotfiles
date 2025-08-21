@@ -10,7 +10,7 @@
   "icon_theme": "Catppuccin Mocha",
   "show_edit_predictions": true,
   "features": {
-    "edit_prediction_provider": "supermaven"
+    "edit_prediction_provider": "none"
   },
   "ui_font_family": "MesloLGM Nerd Font Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
@@ -357,6 +357,7 @@
       "enabled": false
     }
   },
+  "use_autoclose": false,
   // Whether the screen sharing icon is shown in the os status bar.
   "show_call_status_icon": false,
   // Whether to use language servers to provide code intelligence.
@@ -568,6 +569,7 @@
   "load_direnv": "direct",
   "edit_predictions": {
     // A list of globs representing files that inline completions should be disabled for.
+    "mode": "eager",
     "disabled_globs": [".env"]
   },
   // Settings specific to journaling
