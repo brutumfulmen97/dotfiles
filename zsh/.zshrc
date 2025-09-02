@@ -1,7 +1,7 @@
 export PATH=$HOME/.local/bin:$PATH
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
-# source /home/vlatko/kickstart/autocomplete.sh
+source /home/vlatko/kickstart/autocomplete.sh
 
 export EDITOR=nvim
 export SUDO_EDITOR="$EDITOR"
@@ -106,3 +106,17 @@ export PATH=$PATH:$HOME/go/bin
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+
+
+# bun completions
+[ -s "/home/vlatko/.bun/_bun" ] && source "/home/vlatko/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+alias claude="/home/vlatko/.claude/local/claude"

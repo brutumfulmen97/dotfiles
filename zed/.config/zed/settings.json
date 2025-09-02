@@ -10,7 +10,7 @@
   "icon_theme": "Catppuccin Mocha",
   "show_edit_predictions": true,
   "features": {
-    "edit_prediction_provider": "none"
+    "edit_prediction_provider": "zed"
   },
   "ui_font_family": "MesloLGM Nerd Font Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
@@ -20,7 +20,7 @@
   "theme": {
     "mode": "system",
     "light": "Ayu Mirage",
-    "dark": "Catppuccin Mocha (Blue Blur+)"
+    "dark": "Catppuccin Mocha - No Italics"
   },
   "toolbar": {
     // Whether to show breadcrumbs.
@@ -858,12 +858,7 @@
         "plugins": ["prettier-plugin-java"]
       }
     },
-    "JavaScript": {
-      "language_servers": ["!typescript-language-server", "vtsls", "..."],
-      "prettier": {
-        "allowed": true
-      }
-    },
+
     "JSON": {
       "prettier": {
         "allowed": true
@@ -930,19 +925,8 @@
         "plugins": ["prettier-plugin-svelte"]
       }
     },
-    "TSX": {
-      "language_servers": ["!typescript-language-server", "vtsls", "..."],
-      "prettier": {
-        "allowed": true
-      }
-    },
+
     "Twig": {
-      "prettier": {
-        "allowed": true
-      }
-    },
-    "TypeScript": {
-      "language_servers": ["!typescript-language-server", "vtsls", "..."],
       "prettier": {
         "allowed": true
       }
@@ -966,6 +950,50 @@
     },
     "Zig": {
       "language_servers": ["zls", "..."]
+    },
+    "JavaScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      }
+    },
+    "TypeScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      }
+    },
+    "JSX": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      }
+    },
+    "TSX": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      }
     }
   },
   // Different settings for specific language models.
@@ -1036,6 +1064,7 @@
     "highlight_on_yank_duration": 200,
     "custom_digraphs": {}
   },
+  "cursor_blink": false,
   // The server to connect to. If the environment variable
   // ZED_SERVER_URL is set, it will override this setting.
   "server_url": "https://zed.dev",

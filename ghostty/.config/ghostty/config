@@ -45,10 +45,6 @@ window-padding-y = 0
 window-padding-x = 10
 theme=catppuccin-mocha
 window-decoration=none
-font-size=18
-
-background-opacity = 0.90
-background-blur-radius = 40
 
 # keyboard
 keybind = alt+h=goto_split:left
@@ -56,3 +52,6 @@ keybind = alt+j=goto_split:down
 keybind = alt+k=goto_split:up
 keybind = alt+l=goto_split:right
 
+keybind = shift+enter=text:\n
+
+keybind = ctrl+shift+h=write_screen_file:paste
