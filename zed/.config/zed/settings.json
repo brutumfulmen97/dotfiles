@@ -10,7 +10,7 @@
   "icon_theme": "Catppuccin Mocha",
   "show_edit_predictions": true,
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "supermaven"
   },
   "ui_font_family": "MesloLGM Nerd Font Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
