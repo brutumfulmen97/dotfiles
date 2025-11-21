@@ -1,7 +1,6 @@
 export PATH=$HOME/.local/bin:$PATH
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
-source /home/vlatko/kickstart/autocomplete.sh
 
 export EDITOR=nvim
 export SUDO_EDITOR="$EDITOR"
@@ -64,6 +63,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias vim='nvim'
+alias n='nvim'
 alias c='clear'
 alias lzg='lazygit'
 alias lzd='lazydocker'
@@ -82,6 +82,8 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 
 source /usr/share/nvm/init-nvm.sh
+
+bindkey -s ^f "tmux-sessionizer\n"
 
 # Enable Ctrl+Left/Right word navigation
 bindkey "^[[1;5C" forward-word
@@ -119,4 +121,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-alias claude="/home/vlatko/.claude/local/claude"
+. "$HOME/.cargo/env"
+
+# opencode
+export PATH=/home/vlatko/.opencode/bin:$PATH

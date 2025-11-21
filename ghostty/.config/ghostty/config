@@ -42,13 +42,22 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 window-padding-y = 0
-window-padding-x = 10
-theme=catppuccin-mocha
+window-padding-x = 4
+theme=Vesper
 window-decoration=none
+font-family = JetBrainsMono Nerd Font
+# window-padding-color = extend-always
+
+cursor-style=block
+cursor-style-blink=false
+shell-integration-features=no-cursor
+custom-shader-animation = always
+
+custom-shader = shaders/cursor_sweep.glsl
 
 # keyboard
 keybind = alt+h=goto_split:left
-keybind = alt+j=goto_split:down  
+keybind = alt+j=goto_split:down
 keybind = alt+k=goto_split:up
 keybind = alt+l=goto_split:right
 

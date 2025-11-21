@@ -11,8 +11,24 @@
     "bindings": {
       "alt-h": "workspace::ActivatePaneLeft",
       "alt-l": "workspace::ActivatePaneRight",
-      "space space": "file_finder::Toggle",
-      ";": "command_palette::Toggle"
+      "space space": [
+        "task::Spawn",
+        { "task_name": "file_finder", "reveal_target": "center" }
+      ],
+      "space f": [
+        "task::Spawn",
+        { "task_name": "fulltext_search", "reveal_target": "center" }
+      ],
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "lazy_git", "reveal_target": "center" }
+      ],
+      "space g d": [
+        "task::Spawn",
+        { "task_name": "lazy_docker", "reveal_target": "center" }
+      ],
+      ";": "command_palette::Toggle",
+      "g r r": "editor::Rename"
     }
   },
   {
@@ -39,7 +55,9 @@
   {
     "context": "(Workspace || Editor) && (vim_mode == insert)",
     "bindings": {
-      "j j": "vim::SwitchToNormalMode"
+      "j j": "vim::SwitchToNormalMode",
+      "j k": "vim::SwitchToNormalMode",
+      "k k": "vim::SwitchToNormalMode"
     }
   },
   {
