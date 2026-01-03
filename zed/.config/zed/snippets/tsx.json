@@ -1,0 +1,7 @@
+{
+  "React component": {
+    "prefix": "rfc",
+    "body": ["\"use client\";\n\nimport type { FC } from \"react\";\n\ntype Props = {};\n\nconst Component: FC<Props> = () => {\nreturn <div>Component</div>;\n};\n\nexport { Component };", "$0"],
+    "description": "Creates a React functional component"
+  }
+}

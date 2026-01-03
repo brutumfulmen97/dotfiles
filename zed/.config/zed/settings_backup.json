@@ -7,24 +7,25 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "snippet_sort_order": "top",
   "title_bar": {
     "show_menus": false,
     "show_sign_in": true,
     "show_user_picture": false,
     "show_onboarding_banner": false,
     "show_project_items": true,
-    "show_branch_name": true
+    "show_branch_name": true,
   },
   "debugger": {
-    "button": true
+    "button": true,
   },
   "status_bar": {
-    "cursor_position_button": false
+    "cursor_position_button": false,
   },
   "icon_theme": "Catppuccin Mocha",
   "show_edit_predictions": true,
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "copilot",
   },
   "ui_font_family": "MesloLGM Nerd Font Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font",
@@ -34,7 +35,7 @@
   "theme": {
     "mode": "system",
     "light": "Ayu Mirage",
-    "dark": "Vesper"
+    "dark": "Vesper",
   },
   "toolbar": {
     // Whether to show breadcrumbs.
@@ -42,7 +43,7 @@
     // Whether to show quick action buttons.
     "quick_actions": false,
     // Whether to show the Selections menu in the editor toolbar
-    "selections_menu": false
+    "selections_menu": false,
   },
   "scrollbar": {
     // When to show the scrollbar in the editor.
@@ -78,8 +79,8 @@
       /// When false, forcefully disables the horizontal scrollbar. Otherwise, obey other settings.
       "horizontal": true,
       /// When false, forcefully disables the vertical scrollbar. Otherwise, obey other settings.
-      "vertical": true
-    }
+      "vertical": true,
+    },
   },
   "diagnostics_max_severity": null,
   // Enable middle-click paste on Linux.
@@ -100,7 +101,7 @@
     "runnables": false,
     // Whether to show fold buttons in the gutter.
     "folds": false,
-    "breakpoints": true
+    "breakpoints": true,
   },
   "indent_guides": {
     /// Whether to show indent guides in the editor.
@@ -121,7 +122,7 @@
     ///
     /// 1. "disabled"
     /// 2. "indent_aware"
-    "background_coloring": "disabled"
+    "background_coloring": "disabled",
   },
   // Whether the editor will scroll beyond the last line.
   "scroll_beyond_last_line": "one_page",
@@ -134,7 +135,7 @@
   // Scroll sensitivity multiplier. This multiplier is applied
   // to both the horizontal and vertical delta values while scrolling.
   "scroll_sensitivity": 1.0,
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   // If 'search_wrap' is disabled, search result do not wrap around the end of the file.
   "search_wrap": true,
   // Search options to enable by default when opening new project and buffer searches.
@@ -143,7 +144,7 @@
     "whole_word": false,
     "case_sensitive": false,
     "include_ignored": false,
-    "regex": false
+    "regex": false,
   },
   // When to populate a new search's query based on the text under the cursor.
   // This setting can take the following three values:
@@ -174,7 +175,7 @@
     "edit_debounce_ms": 700,
     // Time to wait after scrolling the buffer, before requesting the hints,
     // set to 0 to disable debouncing.
-    "scroll_debounce_ms": 50
+    "scroll_debounce_ms": 50,
   },
   "project_panel": {
     // Whether to show the project panel button in the status bar
@@ -215,7 +216,7 @@
       ///    "always"
       /// 5. Never show the scrollbar:
       ///    "never"
-      "show": null
+      "show": null,
     },
     /// Which files containing diagnostic errors/warnings to mark in the project panel.
     /// This setting can take the following three values:
@@ -236,8 +237,8 @@
       //    "always"
       // 2. Never show indent guides:
       //    "never"
-      "show": "always"
-    }
+      "show": "always",
+    },
   },
   "outline_panel": {
     // Whether to show the outline panel button in the status bar
@@ -270,7 +271,7 @@
       //    "always"
       // 2. Never show indent guides:
       //    "never"
-      "show": "always"
+      "show": "always",
     },
     /// Scrollbar-related settings
     "scrollbar": {
@@ -287,8 +288,8 @@
       ///    "always"
       /// 5. Never show the scrollbar:
       ///    "never"
-      "show": null
-    }
+      "show": null,
+    },
   },
   "collaboration_panel": {
     // Whether to show the collaboration panel button in the status bar.
@@ -296,7 +297,7 @@
     // Where to dock the collaboration panel. Can be 'left' or 'right'.
     "dock": "left",
     // Default width of the collaboration panel.
-    "default_width": 240
+    "default_width": 240,
   },
   "chat_panel": {
     // When to show the chat panel button in the status bar.
@@ -306,7 +307,7 @@
     // Where to the chat panel. Can be 'left' or 'right'.
     "dock": "right",
     // Default width of the chat panel.
-    "default_width": 240
+    "default_width": 240,
   },
   "git_panel": {
     // Whether to show the git panel button in the status bar.
@@ -323,13 +324,13 @@
       // When to show the scrollbar in the git panel.
       //
       // Default: inherits editor scrollbar settings
-      "show": null
-    }
+      "show": null,
+    },
   },
   "message_editor": {
     // Whether to automatically replace emoji shortcodes with emoji characters.
     // For example: typing `:wave:` gets replaced with `👋`.
-    "auto_replace_emoji_shortcode": true
+    "auto_replace_emoji_shortcode": true,
   },
   "notification_panel": {
     // Whether to show the notification panel button in the status bar.
@@ -337,27 +338,28 @@
     // Where to dock the notification panel. Can be 'left' or 'right'.
     "dock": "right",
     // Default width of the notification panel.
-    "default_width": 380
+    "default_width": 380,
   },
   "agent": {
+    "default_profile": "ask",
     "default_model": {
-      "provider": "google",
-      "model": "gemini-2.5-pro"
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini",
     },
-    "model_parameters": []
+    "model_parameters": [],
   },
   // The settings for slash commands.
   "slash_commands": {
     // Settings for the `/docs` slash command.
     "docs": {
       // Whether `/docs` is enabled.
-      "enabled": false
+      "enabled": false,
     },
     // Settings for the `/project` slash command.
     "project": {
       // Whether `/project` is enabled.
-      "enabled": false
-    }
+      "enabled": false,
+    },
   },
   "use_autoclose": true,
   // Whether the screen sharing icon is shown in the os status bar.
@@ -390,7 +392,7 @@
     // Whether or not to show the tab bar in the editor
     "show": false,
     // Whether or not to show the navigation history buttons.
-    "show_nav_history_buttons": false
+    "show_nav_history_buttons": false,
   },
   // Settings related to the editor's tabs
   "tabs": {
@@ -421,7 +423,7 @@
     ///    "errors"
     /// 3. Mark files with errors and warnings:
     ///    "all"
-    "show_diagnostics": "all"
+    "show_diagnostics": "all",
   },
   // Settings related to preview tabs.
   "preview_tabs": {
@@ -433,7 +435,7 @@
     // Whether to open tabs in preview mode when selected from the file finder.
     "enable_preview_from_file_finder": false,
     // Whether a preview tab gets replaced when code navigation is used to navigate away from the tab.
-    "enable_preview_from_code_navigation": false
+    "enable_preview_from_code_navigation": false,
   },
   // Settings related to the file finder.
   "file_finder": {
@@ -454,7 +456,7 @@
     //    "modal_width": "full"
     //
     // Default: small
-    "modal_max_width": "small"
+    "modal_max_width": "small",
   },
   // Whether or not to remove any trailing whitespace from lines of a buffer
   // before saving it.
@@ -497,7 +499,7 @@
   //      "soft_wrap": "preferred_line_length",
   // 4. Soft wrap lines at the preferred line length or the editor width (whichever is smaller).
   //      "soft_wrap": "bounded",
-  "soft_wrap": "editor_width",
+  "soft_wrap": "none",
   // The column at which to soft-wrap lines, for buffers where soft-wrap
   // is enabled.
   "preferred_line_length": 80,
@@ -511,7 +513,7 @@
     // Send debug info like crash reports.
     "diagnostics": false,
     // Send anonymized usage data like what languages you're using Zed with.
-    "metrics": true
+    "metrics": true,
   },
   // Automatically update Zed. This setting may be ignored on Linux if
   // installed through a package manager.
@@ -522,8 +524,8 @@
     "include_warnings": true,
     "inline": {
       "enabled": true,
-      "max_severity": null
-    }
+      "max_severity": null,
+    },
   },
   // Add files or globs of files that will be excluded by Zed entirely:
   // they will be skipped during FS scan(s), file tree and file search
@@ -537,7 +539,7 @@
     "**/.DS_Store",
     "**/Thumbs.db",
     "**/.classpath",
-    "**/.settings"
+    "**/.settings",
   ],
   // Add files or globs of files that will be included by Zed, even when
   // ignored by git. This is useful for files that are not tracked by git,
@@ -555,7 +557,7 @@
     // Control whether the git blame information is shown inline,
     // in the currently focused line.
     "inline_blame": {
-      "enabled": true
+      "enabled": true,
       // Sets a delay after which the inline blame information is shown.
       // Delay is restarted with every cursor movement.
       // "delay_ms": 600
@@ -565,7 +567,7 @@
       //
       // The minimum column number to show the inline blame information at
       // "min_column": 0
-    }
+    },
   },
   // Configuration for how direnv configuration should be loaded. May take 2 values:
   // 1. Load direnv configuration using `direnv export json` directly.
@@ -576,7 +578,7 @@
   "edit_predictions": {
     // A list of globs representing files that inline completions should be disabled for.
     "mode": "eager",
-    "disabled_globs": [".env"]
+    "disabled_globs": [".env"],
   },
   // Settings specific to journaling
   "journal": {
@@ -586,7 +588,7 @@
     // May take 2 values:
     // 1. hour12
     // 2. hour24
-    "hour_format": "hour12"
+    "hour_format": "hour12",
   },
   // Settings specific to the terminal
   "terminal": {
@@ -701,8 +703,8 @@
         // in your project's settings, rather than globally.
         "directories": [".env", "env", ".venv", "venv"],
         // Can also be `csh`, `fish`, `nushell` and `power_shell`
-        "activate_script": "default"
-      }
+        "activate_script": "default",
+      },
     },
     "toolbar": {
       // Whether to display the terminal title in its toolbar's breadcrumbs.
@@ -710,7 +712,7 @@
       //
       // The shell running in the terminal needs to be configured to emit the title.
       // Example: `echo -e "\e]2;New Title\007";`
-      "breadcrumbs": true
+      "breadcrumbs": true,
     },
     /// Scrollbar-related settings
     "scrollbar": {
@@ -727,8 +729,8 @@
       ///    "always"
       /// 5. Never show the scrollbar:
       ///    "never"
-      "show": null
-    }
+      "show": null,
+    },
     // Set the terminal's font size. If this option is not included,
     // the terminal will default to matching the buffer's font size.
     // "font_size": 15,
@@ -747,7 +749,7 @@
   "code_actions_on_format": {},
   /// Settings related to running tasks.
   "tasks": {
-    "variables": {}
+    "variables": {},
   },
   // An object whose keys are language names, and whose values
   // are arrays of filenames or extensions of files that should
@@ -767,10 +769,10 @@
       "**/.zed/**/*.json",
       "**/zed/**/*.json",
       "**/Zed/**/*.json",
-      "**/.vscode/**/*.json"
+      "**/.vscode/**/*.json",
     ],
     "PHP": ["php", "module", "install", "theme"],
-    "Shell Script": [".env.*"]
+    "Shell Script": [".env.*"],
   },
   /// By default use a recent system version of node, or install our own.
   /// You can override this to use a version of node that is not in $PATH with:
@@ -792,7 +794,7 @@
   // If you don't want any of these extensions, add this field to your settings
   // and change the value to `false`.
   "auto_install_extensions": {
-    "html": true
+    "html": true,
   },
   // Different settings for specific languages.
   "languages": {
@@ -800,103 +802,103 @@
       "language_servers": ["astro-language-server", "..."],
       "prettier": {
         "allowed": true,
-        "plugins": ["prettier-plugin-astro"]
-      }
+        "plugins": ["prettier-plugin-astro"],
+      },
     },
     "Blade": {
       "prettier": {
-        "allowed": true
-      }
+        "allowed": true,
+      },
     },
     "C": {
       "format_on_save": "off",
       "use_on_type_format": false,
       "prettier": {
-        "allowed": false
-      }
+        "allowed": false,
+      },
     },
     "C++": {
       "format_on_save": "off",
       "use_on_type_format": false,
       "prettier": {
-        "allowed": false
-      }
+        "allowed": false,
+      },
     },
     "CSS": {
       "prettier": {
-        "allowed": true
-      }
+        "allowed": true,
+      },
     },
     "Dart": {
-      "tab_size": 2
+      "tab_size": 2,
     },
     "Diff": {
       "remove_trailing_whitespace_on_save": false,
-      "ensure_final_newline_on_save": false
+      "ensure_final_newline_on_save": false,
     },
     "Elixir": {
-      "language_servers": ["elixir-ls", "!next-ls", "!lexical", "..."]
+      "language_servers": ["elixir-ls", "!next-ls", "!lexical", "..."],
     },
     "Erlang": {
-      "language_servers": ["erlang-ls", "!elp", "..."]
+      "language_servers": ["erlang-ls", "!elp", "..."],
     },
     "Go": {
       "code_actions_on_format": {
-        "source.organizeImports": true
-      }
+        "source.organizeImports": true,
+      },
     },
     "GraphQL": {
       "prettier": {
-        "allowed": true
-      }
+        "allowed": true,
+      },
     },
     "HEEX": {
-      "language_servers": ["elixir-ls", "!next-ls", "!lexical", "..."]
+      "language_servers": ["elixir-ls", "!next-ls", "!lexical", "..."],
     },
     "HTML": {
       "prettier": {
-        "allowed": true
-      }
+        "allowed": true,
+      },
     },
     "Java": {
       "prettier": {
         "allowed": true,
-        "plugins": ["prettier-plugin-java"]
-      }
+        "plugins": ["prettier-plugin-java"],
+      },
     },
 
     "JSON": {
       "prettier": {
-        "allowed": true
-      }
+        "allowed": true,
+      },
     },
     "JSONC": {
       "prettier": {
-        "allowed": true
-      }
+        "allowed": true,
+      },
     },
     "Markdown": {
       "format_on_save": "off",
       "use_on_type_format": false,
       "prettier": {
-        "allowed": true
-      }
+        "allowed": true,
+      },
     },
     "theme": {
       "language_servers": ["phpactor", "!intelephense", "..."],
       "prettier": {
         "allowed": true,
         "plugins": ["@prettier/plugin-php"],
-        "parser": "php"
-      }
+        "parser": "php",
+      },
     },
     "module": {
       "language_servers": ["phpactor", "!intelephense", "..."],
       "prettier": {
         "allowed": true,
         "plugins": ["@prettier/plugin-php"],
-        "parser": "php"
-      }
+        "parser": "php",
+      },
     },
 
     "PHP": {
@@ -904,99 +906,99 @@
       "prettier": {
         "allowed": true,
         "plugins": ["@prettier/plugin-php"],
-        "parser": "php"
-      }
+        "parser": "php",
+      },
     },
     "Ruby": {
-      "language_servers": ["solargraph", "!ruby-lsp", "!rubocop", "..."]
+      "language_servers": ["solargraph", "!ruby-lsp", "!rubocop", "..."],
     },
     "SCSS": {
       "prettier": {
-        "allowed": true
-      }
+        "allowed": true,
+      },
     },
     "SQL": {
       "prettier": {
         "allowed": true,
-        "plugins": ["prettier-plugin-sql"]
-      }
+        "plugins": ["prettier-plugin-sql"],
+      },
     },
     "Starlark": {
-      "language_servers": ["starpls", "!buck2-lsp", "..."]
+      "language_servers": ["starpls", "!buck2-lsp", "..."],
     },
     "Svelte": {
       "language_servers": ["svelte-language-server", "..."],
       "prettier": {
         "allowed": true,
-        "plugins": ["prettier-plugin-svelte"]
-      }
+        "plugins": ["prettier-plugin-svelte"],
+      },
     },
 
     "Twig": {
       "prettier": {
-        "allowed": true
-      }
+        "allowed": true,
+      },
     },
     "Vue.js": {
       "language_servers": ["vue-language-server", "..."],
       "prettier": {
-        "allowed": true
-      }
+        "allowed": true,
+      },
     },
     "XML": {
       "prettier": {
         "allowed": true,
-        "plugins": ["@prettier/plugin-xml"]
-      }
+        "plugins": ["@prettier/plugin-xml"],
+      },
     },
     "YAML": {
       "prettier": {
-        "allowed": true
-      }
+        "allowed": true,
+      },
     },
     "Zig": {
-      "language_servers": ["zls", "..."]
+      "language_servers": ["zls", "..."],
     },
     "JavaScript": {
       "formatter": {
         "language_server": {
-          "name": "biome"
-        }
+          "name": "biome",
+        },
       },
       "code_actions_on_format": {
         "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      }
+        "source.organizeImports.biome": true,
+      },
     },
     "TypeScript": {
       "formatter": {
         "language_server": {
-          "name": "biome"
-        }
+          "name": "biome",
+        },
       },
       "code_actions_on_format": {
         "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      }
+        "source.organizeImports.biome": true,
+      },
     },
     "JSX": {
       "formatter": {
         "language_server": {
-          "name": "biome"
-        }
+          "name": "biome",
+        },
       },
       "code_actions_on_format": {
         "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      }
+        "source.organizeImports.biome": true,
+      },
     },
     "TSX": {
       "inlay_hints": {
-        "enabled": true
+        "enabled": true,
       },
       "prettier": {
-        "allowed": true
-      }
+        "allowed": true,
+      },
       // "formatter": {
       //   "language_server": {
       //     "name": "biome"
@@ -1006,28 +1008,28 @@
       //   "source.fixAll.biome": true,
       //   "source.organizeImports.biome": true
       // }
-    }
+    },
   },
   // Different settings for specific language models.
   "language_models": {
     "anthropic": {
-      "api_url": "https://api.anthropic.com"
+      "api_url": "https://api.anthropic.com",
     },
     "google": {
-      "api_url": "https://generativelanguage.googleapis.com"
+      "api_url": "https://generativelanguage.googleapis.com",
     },
     "ollama": {
-      "api_url": "http://localhost:11434"
+      "api_url": "http://localhost:11434",
     },
     "openai": {
-      "api_url": "https://api.openai.com/v1"
+      "api_url": "https://api.openai.com/v1",
     },
     "lmstudio": {
-      "api_url": "http://localhost:1234/api/v0"
+      "api_url": "http://localhost:1234/api/v0",
     },
     "deepseek": {
-      "api_url": "https://api.deepseek.com"
-    }
+      "api_url": "https://api.deepseek.com",
+    },
   },
   // Zed's Prettier integration settings.
   // Allows to enable/disable formatting with Prettier
@@ -1060,6 +1062,11 @@
     //         }
     //     }
     // }
+    "snippet-competions-server": {
+      "settings": {
+        "feature_paths": true,
+      },
+    },
   },
   // Jupyter settings
   "jupyter": {
@@ -1074,7 +1081,7 @@
     "toggle_relative_line_numbers": false,
     "use_smartcase_find": true,
     "highlight_on_yank_duration": 200,
-    "custom_digraphs": {}
+    "custom_digraphs": {},
   },
   "cursor_blink": false,
   // The server to connect to. If the environment variable
@@ -1146,5 +1153,5 @@
   // ]
   "ssh_connections": [],
   // Configures context servers for use in the Assistant.
-  "context_servers": {}
+  "context_servers": {},
 }

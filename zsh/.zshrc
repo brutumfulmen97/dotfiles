@@ -68,6 +68,7 @@ alias c='clear'
 alias lzg='lazygit'
 alias lzd='lazydocker'
 alias ..='cd ../'
+alias rm='rm -i'
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias ls='eza -lh --group-directories-first --icons=auto'
 alias lsa='ls -a'
