@@ -1,19 +1,16 @@
 (defcfg
   process-unmapped-keys yes
 )
+
 (defsrc
-  ralt 
-  caps h j k l d spc
+  l    k
 )
+
 (defalias
-  ralt-mod (tap-hold 200 200 lmet lmet)
-  caps-mod (tap-hold 200 200 esc (layer-toggle arrows))
+  l_ctrl (tap-hold 350 350 l lctl)
+  k_shift (tap-hold 350 350 k lsft)
 )
+
 (deflayer base
-  @ralt-mod
-  @caps-mod h j k l d spc
-)
-(deflayer arrows
-  @ralt-mod
-  _ left down up right del ret
+  @l_ctrl    @k_shift
 )

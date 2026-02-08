@@ -24,9 +24,6 @@
   },
   "icon_theme": "Catppuccin Mocha",
   "show_edit_predictions": true,
-  "features": {
-    "edit_prediction_provider": "copilot",
-  },
   "ui_font_family": "MesloLGM Nerd Font Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "vim_mode": true,
@@ -343,14 +340,17 @@
   "agent": {
     "inline_assistant_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4.5"
+      "model": "claude-sonnet-4.5",
     },
     "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4.5",
+      "model": "gpt-5.2-codex",
     },
     "model_parameters": [],
+    "agents_panel_dock": "left",
+    "button": false,
+    "dock": "left",
   },
   // The settings for slash commands.
   "slash_commands": {
@@ -365,7 +365,7 @@
       "enabled": false,
     },
   },
-  "use_autoclose": true,
+  "use_autoclose": false,
   // Whether the screen sharing icon is shown in the os status bar.
   "show_call_status_icon": false,
   // Whether to use language servers to provide code intelligence.
@@ -583,6 +583,7 @@
     // A list of globs representing files that inline completions should be disabled for.
     "mode": "eager",
     "disabled_globs": [".env"],
+    "provider": "mercury",
   },
   // Settings specific to journaling
   "journal": {
@@ -802,6 +803,9 @@
   },
   // Different settings for specific languages.
   "languages": {
+    "Scala": {
+      "show_edit_predictions": false,
+    },
     "Astro": {
       "language_servers": ["astro-language-server", "..."],
       "prettier": {
@@ -975,6 +979,8 @@
       },
     },
     "TypeScript": {
+      // "language_servers": ["tsgo", "vtsls", "biome"],
+      "language_servers": ["vtsls", "biome"],
       "formatter": {
         "language_server": {
           "name": "biome",
@@ -997,6 +1003,8 @@
       },
     },
     "TSX": {
+      "language_servers": ["vtsls", "biome"],
+      // "language_servers": ["tsgo", "vtsls", "biome"],
       "inlay_hints": {
         "enabled": true,
       },

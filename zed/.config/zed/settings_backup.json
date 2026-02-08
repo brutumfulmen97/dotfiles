@@ -341,12 +341,19 @@
     "default_width": 380,
   },
   "agent": {
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4.5",
+    },
     "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5-mini",
+      "model": "gpt-5.2",
     },
     "model_parameters": [],
+    "agents_panel_dock": "left",
+    "button": false,
+    "dock": "left",
   },
   // The settings for slash commands.
   "slash_commands": {
@@ -361,7 +368,7 @@
       "enabled": false,
     },
   },
-  "use_autoclose": true,
+  "use_autoclose": false,
   // Whether the screen sharing icon is shown in the os status bar.
   "show_call_status_icon": false,
   // Whether to use language servers to provide code intelligence.
@@ -435,7 +442,7 @@
     // Whether to open tabs in preview mode when selected from the file finder.
     "enable_preview_from_file_finder": false,
     // Whether a preview tab gets replaced when code navigation is used to navigate away from the tab.
-    "enable_preview_from_code_navigation": false,
+    "enable_keep_preview_on_code_navigation": false,
   },
   // Settings related to the file finder.
   "file_finder": {
@@ -798,6 +805,9 @@
   },
   // Different settings for specific languages.
   "languages": {
+    "Scala": {
+      "show_edit_predictions": false,
+    },
     "Astro": {
       "language_servers": ["astro-language-server", "..."],
       "prettier": {
@@ -971,6 +981,8 @@
       },
     },
     "TypeScript": {
+      // "language_servers": ["tsgo", "vtsls", "biome"],
+      "language_servers": ["vtsls", "biome"],
       "formatter": {
         "language_server": {
           "name": "biome",
@@ -993,6 +1005,8 @@
       },
     },
     "TSX": {
+      "language_servers": ["vtsls", "biome"],
+      // "language_servers": ["tsgo", "vtsls", "biome"],
       "inlay_hints": {
         "enabled": true,
       },
@@ -1082,6 +1096,9 @@
     "use_smartcase_find": true,
     "highlight_on_yank_duration": 200,
     "custom_digraphs": {},
+    "cursor_shape": {
+      "insert": "hollow",
+    },
   },
   "cursor_blink": false,
   // The server to connect to. If the environment variable
