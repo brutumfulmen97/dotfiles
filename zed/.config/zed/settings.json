@@ -7,6 +7,11 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    }
+  },
   "snippet_sort_order": "top",
   "title_bar": {
     "show_menus": false,

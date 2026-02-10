@@ -3,14 +3,13 @@
 )
 
 (defsrc
-  l    k
+  l
 )
 
 (defalias
   l_ctrl (tap-hold 350 350 l lctl)
-  k_shift (tap-hold 350 350 k lsft)
 )
 
 (deflayer base
-  @l_ctrl    @k_shift
+  @l_ctrl
 )

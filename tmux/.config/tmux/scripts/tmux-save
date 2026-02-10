@@ -1,0 +1,2 @@
+# this file doesn't really exist, it's just to get syntax highlighting in the python script
+python3 ~/.config/tmux/scripts/tmux-save.py

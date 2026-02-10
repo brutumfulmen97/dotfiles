@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+find -L /tmp -maxdepth 1 -name .tmux-saving -mtime +1 -delete
+test -e ~/.tmux_sessions || mkdir ~/.tmux_sessions
+cd ~/.tmux_sessions
+test -e .git || git init --quiet
+test -f /tmp/.tmux-saving || batch <<EOF
+~/.config/tmux/scripts/tmux-save > /dev/null
+git add -A
+git commit -qam "$(date)" > /dev/null
+rm -f /tmp/.tmux-saving
+EOF
+touch /tmp/.tmux-saving
