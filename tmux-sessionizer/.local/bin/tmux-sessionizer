@@ -1,0 +1,11 @@
+TMUX_SESSIONS_DIR="$HOME/.tmux_sessions"
+
+
+if [[ -z $session_cmd && -z $user_selected && -d "$TMUX_SESSIONS_DIR" ]]; then
+    selected_session=$(find "$TMUX_SESSIONS_DIR" -maxdepth 1 -type f -print | fzf)
+    if [[ -n $selected_session ]]; then
+        bash "$selected_session"
+    fi
+    exit 0
+fi
+

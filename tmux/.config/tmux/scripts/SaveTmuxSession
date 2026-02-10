@@ -1,13 +1,37 @@
 #!/usr/bin/env bash
 
 find -L /tmp -maxdepth 1 -name .tmux-saving -mtime +1 -delete
-test -e ~/.tmux_sessions || mkdir ~/.tmux_sessions
+test -e ~/.tmux_sessions || mkdir -p ~/.tmux_sessions
 cd ~/.tmux_sessions
 test -e .git || git init --quiet
-test -f /tmp/.tmux-saving || batch <<EOF
-~/.config/tmux/scripts/tmux-save > /dev/null
-git add -A
-git commit -qam "$(date)" > /dev/null
-rm -f /tmp/.tmux-saving
-EOF
+
+state_file="$HOME/.tmux_sessions/.state"
+current_state=$( {
+  tmux list-sessions -F '#S'
+  tmux list-windows -a -F '#{session_name}:#{window_index}:#{window_name}:#{window_layout}'
+  tmux list-panes -a -F '#{session_name}:#{window_index}:#{pane_index}:#{pane_current_path}'
+} | sha256sum | awk '{print $1}')
+
+if test -f "$state_file"; then
+  previous_state=$(cat "$state_file")
+  if test "$current_state" = "$previous_state"; then
+    exit 0
+  fi
+fi
+
+echo "$current_state" > "$state_file"
+
+if test -f /tmp/.tmux-saving; then
+  if pgrep -f "tmux-save.py" >/dev/null 2>&1; then
+    exit 0
+  fi
+  rm -f /tmp/.tmux-saving
+fi
+
 touch /tmp/.tmux-saving
+(
+  trap 'rm -f /tmp/.tmux-saving' EXIT
+  ~/.config/tmux/scripts/tmux-save > /dev/null 2>&1
+  git add -A
+  git commit -qam "$(date)" > /dev/null 2>&1
+) &
