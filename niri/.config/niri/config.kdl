@@ -92,7 +92,9 @@ layout {
         // For example, you can perfectly fit four windows sized "proportion 0.25" on an output.
         // The default preset widths are 1/3, 1/2 and 2/3 of the output.
         proportion 0.33333
+        proportion 0.4
         proportion 0.5
+        proportion 0.6
         proportion 0.66667
         proportion 1.0
 
@@ -288,6 +290,79 @@ window-rule {
   // Clips window contents to the rounded corner boundaries.
   clip-to-geometry true
 }
+
+// Window rules for niri
+workspace "1" {}
+workspace "2" {}
+workspace "3" {}
+
+window-rule {
+    match app-id="^spotify$"
+    match app-id="^Spotify$"
+    
+    open-on-workspace "2"
+    open-on-output "HDMI-A-2"
+    open-maximized false
+    default-column-width { proportion 1.0; }
+    default-window-height { proportion 0.33333; }
+    // default-height { proportion 0.5; }
+}
+
+window-rule {
+    match app-id="^obsidian$"
+    match app-id="^Obsidian$"
+    
+    open-on-workspace "2"
+    open-on-output "HDMI-A-2"
+    open-maximized false
+    default-column-width { proportion 1.0; }
+    default-window-height { proportion 0.33333; }
+    // default-height { proportion 0.5; }
+}
+
+window-rule {
+    match app-id="^telegram$"
+    match app-id="^Telegram$"
+    match app-id="^org.telegram.desktop$"
+    
+    open-on-workspace "2"
+    open-on-output "HDMI-A-2"
+    default-column-width { proportion 1.0; }
+    default-window-height { proportion 0.33333; }
+    // default-height { proportion 1.0; }
+}
+
+window-rule {
+    match app-id="^zed$"
+    match app-id="^Zed$"
+    
+    open-on-workspace "1"
+    open-on-output "HDMI-A-1"
+    default-column-width { proportion 0.4; }
+}
+
+window-rule {
+    match app-id="^chromium$"
+    match app-id="^Chromium$"
+    
+    open-on-workspace "1"
+    open-on-output "HDMI-A-2"
+    default-column-width { proportion 1.0; }
+    default-window-height { proportion 0.5; }
+    // default-height { proportion 1.0; }
+}
+
+window-rule {
+    match app-id="^ghostty$"
+    match app-id="^Ghostty$"
+    
+    open-on-workspace "1"
+    open-on-output "HDMI-A-2"
+    default-column-width { proportion 1.0; }
+    default-window-height { proportion 0.5; }
+    // default-height { proportion 1.0; }
+}
+
 
 debug {
   // Allows notification actions and window activation from Noctalia.
